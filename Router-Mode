@@ -1,0 +1,11 @@
+interface bridge add name=LAN-bridge
+ip address add address=172.20.0.1/24 interface=LAN-bridge
+ip dhcp-server setup
+LAN-bridge
+
+
+
+
+
+ip firewall nat add chain=srcnat action=masquerade
+
